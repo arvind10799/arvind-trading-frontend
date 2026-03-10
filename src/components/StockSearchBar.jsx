@@ -56,7 +56,7 @@ export default function StockSearchBar({ setTicker }) {
     const delay = setTimeout(async () => {
       try {
         const res = await axios.get(
-          `https://corsproxy.io/?https://query1.finance.yahoo.com/v1/finance/search?q=${query}`,
+          `https://query1.finance.yahoo.com/v1/finance/search?q=${query}`,
         );
 
         const stocks = res.data.quotes.filter(
@@ -84,7 +84,7 @@ export default function StockSearchBar({ setTicker }) {
         const symbols = results.map((s) => s.symbol).join(",");
 
         const res = await axios.get(
-          `https://corsproxy.io/?https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols}`,
+          `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols}`,
         );
 
         const map = {};
