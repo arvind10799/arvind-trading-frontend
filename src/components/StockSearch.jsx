@@ -18,7 +18,7 @@ export default function StockSearchBar({ setTicker }) {
     const delayDebounce = setTimeout(async () => {
       try {
         const res = await axios.get(
-          `https://corsproxy.io/?https://query1.finance.yahoo.com/v1/finance/search?q=${query}`,
+          `https://query1.finance.yahoo.com/v1/finance/search?q=${query}`,
         );
 
         const stocks = res.data.quotes.filter(
